@@ -9,10 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+		// creates an object whose name is "key" and has the value "Anu"
+		// the below line stores the data
+		// NSUserDefaults.standardUserDefaults().setObject("Anu", forKey: "key")
+		
+		// retrives the data
+		var name = NSUserDefaults.standardUserDefaults().objectForKey("key") as! String
+		println(name)
+		
+		var arr = [1, 2, 3]
+		// NSUserDefaults.standardUserDefaults().setObject(arr, forKey: "array")
+		var a = NSUserDefaults.standardUserDefaults().objectForKey("array") as! NSArray
+		println(a[2])
+
 	}
 
 	override func didReceiveMemoryWarning() {
